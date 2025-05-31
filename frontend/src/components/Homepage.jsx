@@ -1,5 +1,13 @@
-import React from 'react';
 import '../css/page-style.css';
+
+function SkillItem( {src, label}){
+  return(
+    <div style={{ display: "flex", gap: "15px", alignItems: "center" }}>
+      <img className="image-bubble" src={src} width={30} height={30} alt={label} />
+      <div>{label}</div>
+    </div>
+  )
+}
 function Homepage() {
   return (
     <div className="page-container">
@@ -25,10 +33,10 @@ function Homepage() {
         <div className="sticky-notes"> 
 
           <div className="sticky-container"style= {{left: "200px", top : "60px"}}> 
-            <img src = "/yellow-sticky.png" width={350} height={330}/>
+            <img src = "/pink-sticky.png" width={350} height={330}/>
             <div className="sticky-text">
-              <div className="subheading" style={{backgroundColor: "#e9c85c"}}> 
-                <div > Education</div>
+              <div className="subheading" style={{backgroundColor: "#F895A4"}}> 
+                <div style={{fontWeight:"bolder"}}> Education</div>
               </div>
               <div> <br/>• Stony Brook University (2021-2025)</div>
               <div> • Bachelors of Science in Computer Science</div>
@@ -37,10 +45,10 @@ function Homepage() {
           </div>
 
           <div className="sticky-container" style= {{left: "210px", top : "400px"}}> 
-            <img src = "/pink-sticky.png" width={340} height={250}/>
+            <img src = "/yellow-sticky.png" width={340} height={250}/>
             <div className="sticky-text">
-              <div className="subheading" style={{backgroundColor: "#F895A4"}}> 
-                <div> Languages</div>
+              <div className="subheading" style={{backgroundColor: "#e9c85c"}}> 
+                <div style={{fontWeight:"bolder"}}> Languages</div>
               </div>
               <div> <br/>• English</div>
               <div> • Cantonese</div>
@@ -48,38 +56,60 @@ function Homepage() {
           </div>
 
           <div className="sticky-container" style= {{left: "700px", top : "50px"}}> 
-            <img src = "/purple-sticky.png" width={350} height={650}/>
+            <img src = "/purple-sticky.png" width={350} height={700}/>
             <div className="sticky-text">
               <div className="subheading" style={{backgroundColor: "#C594E3" ,width:"200px"}}> 
-                <div> Technical Skills</div>
+                <div style={{fontWeight:"bolder"}}> Technical Skills</div>
               </div>
-              <div>
-                <br/>Programming Languages: <br/> • Python <br/> • Java<br/> • JavaScript<br/> • SQL<br/> • HTML<br/>
-                <br/>Office Suite Proficiency: <br/> • Microsoft Suite<br/> • Google Workspace<br/>
-                <br/>Design Software Expertise: <br/> • AutoCAD<br/> • Fusion 360<br/> • Blender<br/> • Photoshop 
+              
+              <div style={{fontWeight: "bolder"}}> Programming Languages </div>
+              <div className="design-container">
+                <SkillItem src="python.png" label="Python" />
+                <SkillItem src="js.png" label="JavaScript" />
+                <SkillItem src="c.png" label="C" />
+                <SkillItem src="sql.png" label="SQL" />
+                <SkillItem src="html.png" label="HTML" />
               </div>
+
+              <div style={{fontWeight: "bolder"}}> Office Suite Proficiency </div>
+              <div className="design-container">
+                <SkillItem src="microsoft.png" label="Microsoft Office" />
+                <SkillItem src="google.png" label="Google Workspace" />
+              </div>
+
+              <div style={{fontWeight: "bolder"}}> Design Software Expertise </div>
+              <div className="design-container">
+                <div style={{display:"flex", gap:"15px"}}>
+                  <img className="image-bubble" src = "/autocad.png" width={50} height={50}/>
+                  <img className="image-bubble" src = "/fusion.png" width={50} height={50}/>
+                  <img className="image-bubble" src = "/blender.png" width={55} height={50}/>
+                </div>
+                <div style={{display:"flex", gap:"15px"}}>
+                  <img className="image-bubble" src = "/photoshop.png" width={50} height={50}/>
+                  <img className="image-bubble" src = "/premiere.png" width={50} height={50}/>
+                </div>
+              </div>
+
             </div>
           </div>
 
-          <div className="sticky-container" style= {{left: "150px", top : "700px"}}> 
-            <img src = "/blue-sticky.png" width={900} height={600}/>
+          <div className="sticky-container" style= {{left: "150px", top : "750px"}}> 
+            <img src = "/blue-sticky.png" width={900} height={400}/>
             <div className="sticky-text" style={{width: "700px", left: "120px"}}>
               <div className="subheading" style={{backgroundColor: "#A1DCE9" }}> 
                 <div> Experience </div>
               </div>
-              <p>
-                • Classroom Technology DoIT - Stony Brook, NY 					                                                      January 2023- May 2025 
-                <br/>        • Assisted over 100 faculty members with presentation equipment in live teaching situations. 
-                <br/>        • Provided live troubleshooting and technical support, resolving 95% of issues on the first contact. 
-                <br/>        • Managed the setup and breakdown of AV equipment for building-wide operations. 
-                <br/><br/> • Robotic S.T.E.A.M - Brooklyn, NY 				                                                                                  July 2023 - August 2023 
-                <br/>        • Instructed and facilitated educational programs focused on Robotics, Science, Technology, 
-                <br/>          Engineering, Art, and Mathematics (STEAM). 
-                <br/>        • Delivered lessons in programming using platforms such as Scratch and Roblox Studio. 
-                <br/>        • Led hands-on robotics projects employing Lego's robotic kits to teach practical engineering 
-                <br/>          concepts. 
-            
-              </p>
+              <div>
+                <div> 2025</div>
+                <div> 2023</div>
+              </div>
+              <div>
+                <div> Classroom Support Assistant</div>
+                <div> Provided live troubleshooting and technical support</div>
+                <div> Coding Instructor Assistant</div>
+                <div> Instructed and facilitated educational programs focused on Robotics</div>
+              </div>
+
             </div>
           </div>
         </div>

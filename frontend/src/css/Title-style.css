@@ -1,33 +1,76 @@
-.page-container{
+.page-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
+    scroll-snap-type: y mandatory;
+    overflow-x: hidden;
 }
 
-.name-container{
-    background-color: white;
-    height: 100%;
+.name-wrapper {
+    height: 100vh;
+    width: 100%;
+    scroll-snap-align: start;
+    overflow: hidden; 
+    position: relative;
+}
+
+.name-container {
+    height: 100vh;
     width: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    background-color: white;
+    transition: height 0.4s ease;
+    position: relative;
+    z-index: 10;
 }
 
-.name-title{
-    color: #418041;
-    font-size: 150px;
+.name-container.shrink {
+    height: 40vh;
+}
+
+.name-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 9vw;
     font-style: italic;
     font-weight: bolder;
+    color: #418041;
+    transition: all 0.4s ease;
 }
 
-.portfolio-container{
+.name-container.shrink .name-title {
+    font-size: 4vw;
+    top: 60%;
+    transform: translateX(-50%);
+}
+
+.portfolio-container {
+    margin-top: 50px;
     background-color: white;
     border: #418041 solid 14px;
     border-radius: 42px;
+    padding: 40px;
+    text-align: center;
+    width: 10%;
+    position: absolute;
+    top: 50%;
+    left: 43%;
 }
-.portfolio-title{
+
+
+.portfolio-title {
     color: #418041;
-    font-size: 88px;
+    font-size: 60px;
     font-weight: bold;
     text-align: center;
+}
+
+.portfolio-background{
+    position: relative;
+    border: #418041 solid 10px;
 }
