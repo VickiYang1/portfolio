@@ -1,4 +1,5 @@
 import '../css/page-style.css';
+import { useEffect, useState } from 'react';
 
 function SkillItem( {src, label}){
   return(
@@ -9,9 +10,28 @@ function SkillItem( {src, label}){
   )
 }
 function Homepage() {
+
+   const [swingInView, setSwingInView] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const triggerPoint = window.innerHeight * 0.5;
+      const card = document.querySelector(".swinging-card");
+
+      if (card) {
+        const rect = card.getBoundingClientRect();
+        if (rect.top < triggerPoint) {
+          setSwingInView(true);
+        };
+      };
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  },[])
   return (
     <div className="page-container">
-      <div className="swinging-card">
+
+      <div className={`swinging-card ${swingInView ? "animate-swing" : ""}`}>
         <div className="string"></div>
         <div className="ID-card">
           <img src= "/me.png" width={352} height={422}></img>
@@ -19,6 +39,7 @@ function Homepage() {
       </div>
       
       <div className="about-container">
+        <div className="triangle-left"></div>
         <div className="comment-bubble">
           <div className="bubble-text" style={{fontSize: "40px", fontWeight: "bolder"}}>Hey There!</div>
           <p className="bubble-text">

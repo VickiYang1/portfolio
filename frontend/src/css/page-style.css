@@ -25,12 +25,42 @@
     margin-left: 50%;
     margin-top: 5%;
 }
+
+.triangle-left {
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 46%;
+    top: 57%;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-right: 50px solid #7DAA7D;
+}
 .bubble-text{
     color: white;
     font-weight: bold;
     font-size: 18px;
 }
+
+@keyframes swing-down{
+    from{
+        transform:rotateZ(-90deg);
+        opacity: 0;
+    }
+    to{
+        transform: rotateZ(0deg);
+        opacity: 1;
+    }
+}
+
+.animate-swing{
+    transform-origin: top center;
+    animation: swing-down 2s ease-out forwards;
+}
+
+
 .swinging-card{
+    perspective: 1000px;
     position:absolute;
     z-index: 2;
     top: 0;
@@ -38,6 +68,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    opacity:0;
 }
 
 .string{
@@ -82,6 +113,7 @@
     border-radius: 25%;
     padding: 1%;
 }
+
 
 .design-container{
     display: flex;
