@@ -1,0 +1,80 @@
+.page-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.about-container{
+    background-color: white;
+    border-radius: 108px;
+    width: 1224px;
+    height: 753px;
+    margin: 3%;
+    display: flex;
+    z-index: 1;
+    position: relative;
+}
+.comment-bubble{
+    display: flex;
+    flex-direction: column;
+    background-color: #7DAA7D;
+    width: 400px;
+    height: 464px;
+    border-radius: 150px;
+    padding: 5%;
+    margin-left: 50%;
+    margin-top: 5%;
+}
+.bubble-text{
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+.swinging-card{
+    position:absolute;
+    z-index: 2;
+    top: 0;
+    left: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.string{
+    height:300px;
+    width:44px;
+    background-color: #418041;
+}
+
+.sticky-notes{
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    position: relative;
+}
+
+.sticky-container{
+    position: absolute;
+    width: 350px;
+    height: 300px;
+}
+
+.subheading{
+    text-align: center;
+    border-radius: 50px;
+    margin-right: 20px;
+}
+
+.sticky-text {
+  position: absolute;
+  top: 90px;
+  left: 60px;
+  right: 20px;
+  color: #294129; 
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 2;
+  width: 250px;
+}
+
+

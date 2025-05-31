@@ -1,0 +1,33 @@
+.page-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name-container{
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name-title{
+    color: #418041;
+    font-size: 150px;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.portfolio-container{
+    background-color: white;
+    border: #418041 solid 14px;
+    border-radius: 42px;
+}
+.portfolio-title{
+    color: #418041;
+    font-size: 88px;
+    font-weight: bold;
+    text-align: center;
+}
