@@ -2,8 +2,8 @@
 html, body, #root {
   margin: 0;
   padding: 0;
+  height: 100vh; 
   width: 100%;
-  min-height: 100vh;
-  background-color: #B8CFB8;
+  background-image: url('/background.png'); 
   font-family: sans-serif; 
 }

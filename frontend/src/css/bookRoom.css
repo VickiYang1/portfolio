@@ -1,0 +1,21 @@
+.bookRoom-container{
+    background-image: url('/bookRoom.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; 
+    width: 100%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.orb{
+  margin-left: 39%;
+  margin-top: 3%;
+}
+
+.book-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 3%;
+}

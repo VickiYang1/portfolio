@@ -1,0 +1,96 @@
+.aboutMe-container{
+    background-image: url('/throneRoom.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; 
+    width: 100%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+
+}
+
+.fade-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.8s ease;
+  z-index: 9999;
+}
+
+.fade-overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.swipe-right {
+  transform: translateX(100vw);
+  opacity: 0;
+}
+
+.information-container{
+    display: flex;
+}
+
+.clickable:hover{
+    opacity: 80%;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.curtains{
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+.plaque{
+   margin-left: 44%;
+   margin-top: 25%;
+}
+
+.arrows{
+    display: flex;
+    padding-top: 3%;
+}
+.rightArrow{
+    margin-left: 70%;
+}
+
+@keyframes fadeZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup-image {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px white;
+  cursor: pointer;
+  animation: fadeZoomIn 0.4s ease forwards;
+}
