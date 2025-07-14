@@ -34,7 +34,7 @@ function BookRoom() {
             footstep.play();
             setFadeOut(true);
             setTimeout(() => {
-                navigate('/');
+                navigate('/aboutMe');
             }, 500);
         }
     }
@@ -174,7 +174,7 @@ function BookRoom() {
                             <img
                                 src="learnMore.png"
                                 alt="Learn More"
-                                className="learn-more-button"
+                                className="learn-more-button clickable"
                                 onClick={() => window.open(activeBook.link, '_blank')}
                             />
                         </div>

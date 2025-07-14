@@ -53,7 +53,7 @@ function HeroRoom() {
             footstep.play();
             setFadeOut(true);
             setTimeout(() => {
-                navigate('/');
+                navigate('/aboutMe');
             }, 500); 
         }
     };

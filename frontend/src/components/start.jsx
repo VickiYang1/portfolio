@@ -30,7 +30,7 @@ function Start(){
 
     const handleClick = () => {
         const clicked = new Audio ("sounds/select.mp3")
-        const starting = new Audio ("sounds/startSounds.mp3")
+        const starting = new Audio ("sounds/startSound.mp3")
         if (!click) {
             clicked.play();
             starting.play();
