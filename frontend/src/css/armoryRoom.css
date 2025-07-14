@@ -1,0 +1,55 @@
+.ArmoryRoom-container{
+    background-image: url('/armoryRoom.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; 
+    width: 100%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.object-container{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.weapons-container{
+    display: flex;
+    flex-direction: row;
+    margin-left: 15%;
+    margin-top: 1%;
+    
+}
+
+.weapons1{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.weapons2{
+    display: flex;
+    flex-direction: row;
+    margin-top: 15%;
+}
+
+.potions{
+    display: flex;
+    flex-direction: column;
+    margin-left: 8%;
+
+}
+
+.row1{
+    margin-top: 7%;
+}
+.row2{
+    margin-top: 16%;
+    margin-left: 70%;
+}
+.row3{
+    margin-top: 18.5%;
+    margin-left: 10%;
+}
+

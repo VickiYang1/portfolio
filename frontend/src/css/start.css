@@ -1,0 +1,37 @@
+.start-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.start-image {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  transform: scaleX(1.14);
+  transform-origin: center;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.white-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.5); 
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-btn {
+  width: 420px;
+  height: 220px;
+  z-index: 3;
+}

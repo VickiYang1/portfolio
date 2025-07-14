@@ -1,0 +1,24 @@
+.heroRoom-container{
+    background-image: url('/heroRoom.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; 
+    width: 100%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.banner-container{
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  margin-left: 25%;
+}
+
+.banner-plaque{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 7%;
+  padding-right: 5%;
+}

@@ -14,7 +14,9 @@ function AboutMe() {
     const intervalRef = useRef(null);
 
     const handleArrowRight = () => {
+        const footstep = new Audio ("sounds/walking.mp3");
         if (!fadeOut) {
+            footstep.play();
             setFadeOut(true);
             setTimeout(() => {
                 navigate('/bookRoom');
@@ -22,12 +24,25 @@ function AboutMe() {
         }
     };
 
+    const handleArrowLeft = () => {
+        const footstep = new Audio ("sounds/walking.mp3");
+        if (!fadeOut) {
+            footstep.play();
+            setFadeOut(true);
+            setTimeout(() => {
+                navigate('/heroRoom');
+            }, 500); 
+        }
+    }
+
     useEffect(() => {
         const timer = setTimeout(() => setFadeIn(false), 500);
         return () => clearTimeout(timer);
     }, []);
 
     useEffect(() => {
+        const openSound = new Audio('/sounds/curtain-open.mp3')
+        const closeSound = new Audio('/sounds/curtain-close.mp3')
         if (playing) {
             intervalRef.current = setInterval(() => {
                 setFrame(prev => {
@@ -36,6 +51,7 @@ function AboutMe() {
                             clearInterval(intervalRef.current);
                             setPlaying(false);
                             setOpen(true);
+                            openSound.play();
                             return prev;
                         };
                         return prev + 1;
@@ -45,6 +61,7 @@ function AboutMe() {
                             clearInterval(intervalRef.current);
                             setPlaying(false);
                             setOpen(false);
+                            closeSound.play();
                             return prev;
                         }
                         return prev - 1;
@@ -66,6 +83,8 @@ function AboutMe() {
         }
     }
     const plaqueClick = () => {
+        const select = new Audio ("sounds/select.mp3")
+        select.play();
         if(!plaque){
             setPlaque(true)
         }else{
@@ -107,7 +126,11 @@ function AboutMe() {
                     </img>
                 </div>
                 <div className='arrows'>
-                    <img className = {"clickable"} src='leftArrow.png'></img>
+                    <img 
+                        className = {"clickable"} 
+                        src='leftArrow.png' 
+                        onClick={handleArrowLeft}>
+                    </img>
                     <img 
                         className = {"clickable rightArrow"} 
                         src='rightArrow.png' 
