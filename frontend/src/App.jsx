@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
 import BookRoom from './components/bookRoom.jsx';
 import AboutMe from './components/AboutMe.jsx';
@@ -6,11 +6,10 @@ import HeroRoom from './components/heroRoom.jsx';
 import ArmoryRoom from './components/armoryRoom.jsx';
 import Cat from './components/cat.jsx';
 import Start from './components/start.jsx';
-import { useEffect } from 'react';
 
 function App() {
   return (
-    <Router>
+    <Router> {/* ✅ NO basename here */}
       <MainRoutes />
     </Router>
   );
@@ -18,6 +17,7 @@ function App() {
 
 function MainRoutes() {
   const location = useLocation();
+  console.log("Current path:", location.pathname);
 
   return (
     <>
