@@ -2,17 +2,40 @@ This is my personal portfolio website, built with React and designed to showcase
 
 Live site: https://vickiyang1.github.io/portfolio/#/
 
-About:
+
+**About:**
+
 I'm a recent Computer Science graduate from Stony Brook University with a focus in Data Science and AI. This portfolio is a way for me to present my work, highlight the skills I’ve learned, and make a strong first impression for job and internship opportunities.
 
-Features:
+
+
+**Features:**
+
 -Interactive, multi-page layout using React Router
+
 -Themed sections like the Armory of Skills and Tomes of Knowledge
+
 -Smooth transitions and sound effects
+
 -Fully responsive design
 
-Tech Stack:
+
+
+**Tech Stack:**
+
 -React
+
 -JavaScript
+
 -CSS
+
 -React Router
+
+
+
+**How to Run Locally:**
+
+1. clone the repo
+2. cd portfolio
+3. install dependencies (react, react-router-dom, react-dom)
+5. run using npm start
